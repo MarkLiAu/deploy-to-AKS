@@ -56,10 +56,11 @@ stages:
           - task: KubernetesManifest@0
             inputs:
               action: 'createSecret'
+              kubernetesServiceConnection: 'k8sdev-marklk8s-default-1699756921941'
               namespace: 'default'
               secretType: 'dockerRegistry'
               secretName: '$(acrsecret)'
-              dockerRegistryEndpoint: 'K8SExamplesACR'
+              dockerRegistryEndpoint: 'marklacrsc'
           - task: replacetokens@3
             displayName: Replace Tokens
             inputs:
