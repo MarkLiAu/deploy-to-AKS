@@ -36,7 +36,7 @@ stages:
   dependsOn: Build
   variables:
     acrsecret: k8sexamplesacrauth
-    acrdevurl: 'k8sexamplesacr.azurecr.io'
+    acrdevurl: 'marklacr2023.azurecr.io'
     replicaNo: 3
   jobs:
   - deployment: Deploy
